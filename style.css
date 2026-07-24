@@ -958,3 +958,29 @@ flex-direction:column;
 .contact-links a:nth-child(2){
     animation-delay:2s;
 }
+
+/* CONTACT FLOAT FIX */
+
+.contact-header{
+    animation:fadeUp 1.5s ease;
+}
+
+
+.contact-header h1{
+    animation:floatText 6s ease-in-out infinite;
+}
+
+
+.contact-card{
+    animation:floatBox 8s ease-in-out infinite;
+}
+
+
+.contact-links a{
+    animation:floatBox 7s ease-in-out infinite;
+}
+
+
+.contact-links a:nth-child(2){
+    animation-delay:2s;
+}
