@@ -497,11 +497,11 @@ nav div{
 }
 
 /* =====================
-   COMPOSITION PAGE FIX
+   COMPOSITIONS PAGE
 ===================== */
 
 
-.preview{
+.composition-page{
 
 padding:80px 10%;
 
@@ -513,11 +513,31 @@ z-index:2;
 
 
 
-.preview h1{
+.composition-header{
 
-font-size:60px;
+animation:fadeUp 1.5s ease;
 
-margin-bottom:50px;
+margin-bottom:60px;
+
+}
+
+
+
+.composition-header h1{
+
+font-size:80px;
+
+margin:20px 0;
+
+}
+
+
+
+.composition-header p{
+
+color:#ccc;
+
+font-size:20px;
 
 }
 
@@ -535,13 +555,15 @@ gap:45px;
 
 
 
-.composition{
+.composition-card{
 
 background:#141414;
 
+border-radius:25px;
+
 padding:30px;
 
-border-radius:25px;
+border:1px solid #222;
 
 transition:.5s;
 
@@ -551,7 +573,7 @@ animation:floatBox 8s ease-in-out infinite;
 
 
 
-.composition:nth-child(2){
+.composition-card:nth-child(2){
 
 animation-delay:2s;
 
@@ -559,13 +581,16 @@ animation-delay:2s;
 
 
 
-.composition:hover{
+.composition-card:hover{
 
-transform:translateY(-12px);
+transform:translateY(-15px);
 
-box-shadow:0 25px 60px rgba(0,0,0,.7);
+box-shadow:0 30px 80px rgba(0,0,0,.7);
+
+border-color:#d4af37;
 
 }
+
 
 
 
@@ -573,11 +598,11 @@ box-shadow:0 25px 60px rgba(0,0,0,.7);
 
 height:420px;
 
-overflow:hidden;
+background:white;
 
 border-radius:18px;
 
-background:white;
+overflow:hidden;
 
 }
 
@@ -592,6 +617,8 @@ height:100%;
 border:none;
 
 }
+
+
 
 
 
@@ -613,9 +640,9 @@ border:1px solid #d4af37;
 
 color:#d4af37;
 
-padding:6px 14px;
+padding:7px 15px;
 
-border-radius:20px;
+border-radius:30px;
 
 font-size:13px;
 
@@ -623,9 +650,11 @@ font-size:13px;
 
 
 
-.composition h2{
 
-font-size:42px;
+
+.composition-card h2{
+
+font-size:45px;
 
 margin:25px 0 5px;
 
@@ -633,27 +662,33 @@ margin:25px 0 5px;
 
 
 
-.subtitle{
+.composition-card h3{
 
-color:#999;
+font-size:18px;
+
+font-weight:300;
 
 font-style:italic;
 
+color:#999;
+
 }
 
 
 
-.composition p{
+.composition-card p{
 
 color:#ccc;
 
-line-height:1.7;
+line-height:1.8;
 
 }
 
 
 
-.details{
+
+
+.info{
 
 display:grid;
 
@@ -663,25 +698,32 @@ border-top:1px solid #333;
 
 margin-top:25px;
 
-padding-top:20px;
+padding-top:25px;
+
+color:#ccc;
 
 }
 
 
 
-.links{
+
+
+.buttons{
 
 display:flex;
 
 gap:15px;
 
-margin-top:25px;
+margin-top:30px;
 
 }
 
 
 
+
+
 @media(max-width:900px){
+
 
 .composition-grid{
 
@@ -689,7 +731,22 @@ grid-template-columns:1fr;
 
 }
 
-.preview h1{
+
+.composition-header h1{
+
+font-size:55px;
+
+}
+
+
+.score-preview{
+
+height:350px;
+
+}
+
+
+}
 
 font-size:45px;
 
