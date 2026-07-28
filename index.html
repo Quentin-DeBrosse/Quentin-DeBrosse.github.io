@@ -2,9 +2,10 @@
 <html>
 
 <head>
+
 <title>Quentin DeBrosse | Composer</title>
 
-<link rel="stylesheet" href="style.css?v=99">
+<link rel="stylesheet" href="style.css?v=101">
 
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="shortcut icon" href="favicon.png">
@@ -14,6 +15,36 @@
 
 <body>
 
+
+<!-- PAGE LOADER -->
+
+<div class="page-loader">
+
+    <div class="loader-logo">
+        QD
+    </div>
+
+</div>
+
+
+
+
+<!-- GOLD AMBIENT BACKGROUND -->
+
+<div class="ambient-background"></div>
+
+
+
+
+<!-- MOUSE GLOW -->
+
+<div class="mouse-glow"></div>
+
+
+
+
+
+<!-- PARTICLES -->
 
 <div class="particles">
 
@@ -27,18 +58,41 @@
 
 
 
+
+
+
 <nav>
 
-<h2>QD</h2>
+<h2>
+QD
+</h2>
+
 
 <div>
-<a href="index.html">Home</a>
-<a href="bio.html">Bio</a>
-<a href="compositions.html">Compositions</a>
-<a href="contact.html">Contact</a>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="bio.html">
+Bio
+</a>
+
+<a href="compositions.html">
+Compositions
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
 </div>
 
 </nav>
+
+
+
+
 
 
 
@@ -50,12 +104,15 @@
 <div class="background-shape"></div>
 
 
+
+
 <div class="hero-content">
 
 
 <p class="eyebrow">
 COMPOSER • CONDUCTOR • TROMBONIST
 </p>
+
 
 
 
@@ -66,31 +123,77 @@ DeBrosse
 
 
 
+
+
 <p class="hero-description">
-Creating stories through sound.
+
+Creating stories through sound.<br>
 Original music for wind ensemble, orchestra, and beyond.
+
 </p>
+
+
+
+
+<div class="status-badge">
+
+<span></span>
+
+Currently composing new works
+
+</div>
+
+
 
 
 
 <div class="hero-buttons">
 
+
 <a class="button" href="compositions.html">
+
 Explore Music
+
 </a>
+
+
 
 
 <a class="button secondary" href="bio.html">
+
 About Me
+
 </a>
 
-</div>
 
 
 </div>
+
+
+
+
+</div>
+
+
+
+
+
+<div class="scroll-indicator">
+
+<span></span>
+
+<p>
+SCROLL
+</p>
+
+</div>
+
 
 
 </section>
+
+
+
 
 
 
@@ -106,6 +209,8 @@ Featured Work
 
 
 
+
+
 <div class="feature-card">
 
 
@@ -114,9 +219,13 @@ CONCERT BAND • GRADE 4
 </p>
 
 
+
+
 <h3>
 Aphelion
 </h3>
+
+
 
 
 <p>
@@ -124,15 +233,50 @@ A journey through light, distance, and discovery.
 </p>
 
 
+
+
 <a class="button" href="compositions.html">
+
 View Composition
+
 </a>
+
+
 
 
 </div>
 
 
+
 </section>
+
+
+
+
+
+
+
+
+
+<section class="quote-section">
+
+
+<p>
+
+"Music is not just sound — it is a world waiting to be discovered."
+
+</p>
+
+
+<h4>
+— Quentin DeBrosse
+</h4>
+
+
+</section>
+
+
+
 
 
 
@@ -142,45 +286,65 @@ View Composition
 <section class="quick-links">
 
 
+
 <a href="compositions.html">
+
 
 <h3>
 Compositions
 </h3>
 
+
 <p>
 Explore original works and scores.
 </p>
 
+
 </a>
+
+
+
 
 
 
 <a href="bio.html">
 
+
 <h3>
 Biography
 </h3>
+
 
 <p>
 Discover my musical journey.
 </p>
 
+
 </a>
+
+
+
+
 
 
 
 <a href="contact.html">
 
+
 <h3>
 Contact
 </h3>
+
 
 <p>
 Commissions and collaborations.
 </p>
 
+
 </a>
+
+
+
 
 
 </section>
@@ -189,31 +353,90 @@ Commissions and collaborations.
 
 
 
+
+
+
+
 <footer>
 
-<h2>Quentin DeBrosse</h2>
+
+<h2>
+Quentin DeBrosse
+</h2>
+
+
+
 
 <p>
 Composer • Conductor • Trombonist
 </p>
 
 
+
+
+
 <div class="footer-links">
 
-<a href="index.html">Home</a>
-<a href="compositions.html">Compositions</a>
-<a href="bio.html">Bio</a>
-<a href="contact.html">Contact</a>
+
+<a href="index.html">
+Home
+</a>
+
+
+<a href="compositions.html">
+Compositions
+</a>
+
+
+<a href="bio.html">
+Bio
+</a>
+
+
+<a href="contact.html">
+Contact
+</a>
+
 
 </div>
 
 
+
+
+
+
 <p class="copyright">
+
 © 2026 Quentin DeBrosse. All rights reserved.
+
 </p>
 
 
+
+
 </footer>
+
+
+
+
+
+
+
+<script>
+
+const glow = document.querySelector(".mouse-glow");
+
+
+document.addEventListener("mousemove", e => {
+
+    glow.style.left = e.clientX + "px";
+
+    glow.style.top = e.clientY + "px";
+
+});
+
+
+</script>
 
 
 
