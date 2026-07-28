@@ -335,11 +335,17 @@ Composer • Conductor • Trombonist
 
 
 <script>
+
 const cards = document.querySelectorAll(
     '.feature-card, .composition-card, .bio-card, .contact-card, .quick-links a'
 );
 
 cards.forEach(card => {
+
+    card.addEventListener('mouseenter', () => {
+        card.style.animationPlayState = "paused";
+    });
+
 
     card.addEventListener('mousemove', e => {
 
@@ -348,26 +354,37 @@ cards.forEach(card => {
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
 
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
+        const rotateY = ((x / rect.width) - 0.5) * 12;
+        const rotateX = ((y / rect.height) - 0.5) * -12;
 
-        const rotateY = ((x - centerX) / centerX) * 6;
-        const rotateX = ((centerY - y) / centerY) * 6;
 
-        card.style.setProperty('--rotateX', `${rotateX}deg`);
-        card.style.setProperty('--rotateY', `${rotateY}deg`);
+        card.style.transform =
+        `
+        perspective(1000px)
+        rotateX(${rotateX}deg)
+        rotateY(${rotateY}deg)
+        translateY(-10px)
+        `;
 
     });
 
 
     card.addEventListener('mouseleave', () => {
 
-        card.style.setProperty('--rotateX', '0deg');
-        card.style.setProperty('--rotateY', '0deg');
+        card.style.animationPlayState = "running";
+
+        card.style.transform =
+        `
+        perspective(1000px)
+        rotateX(0deg)
+        rotateY(0deg)
+        translateY(0px)
+        `;
 
     });
 
 });
+
 </script>
 
 
