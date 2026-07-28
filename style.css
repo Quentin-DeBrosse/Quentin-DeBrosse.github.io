@@ -1017,36 +1017,46 @@ footer p{
 }
 
 /* =====================
-   AMBIENT BACKGROUND
+   STRONG GOLD AMBIENT BACKGROUND
 ===================== */
 
 .ambient-background{
 
     position:fixed;
 
-    inset:-20%;
+    inset:-30%;
 
     z-index:-1;
 
     pointer-events:none;
 
+
     background:
+
         radial-gradient(
             circle at 20% 30%,
-            rgba(212,175,55,.18),
+            rgba(212,175,55,.45),
             transparent 35%
         ),
 
         radial-gradient(
             circle at 80% 70%,
-            rgba(120,80,0,.15),
+            rgba(255,200,60,.35),
             transparent 40%
+        ),
+
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(180,120,0,.3),
+            transparent 45%
         );
 
-    filter:blur(80px);
+
+    filter:blur(90px);
+
 
     animation:
-        ambientMove 18s ease-in-out infinite alternate;
+        ambientMove 12s ease-in-out infinite alternate;
 
 }
 
@@ -1057,7 +1067,7 @@ footer p{
     0%{
 
         transform:
-            translate(-5%, -5%)
+            translate(-8%, -5%)
             scale(1);
 
     }
@@ -1066,8 +1076,8 @@ footer p{
     50%{
 
         transform:
-            translate(5%, 3%)
-            scale(1.15);
+            translate(8%, 5%)
+            scale(1.2);
 
     }
 
@@ -1075,8 +1085,8 @@ footer p{
     100%{
 
         transform:
-            translate(-3%, 8%)
-            scale(1.05);
+            translate(-5%, 10%)
+            scale(1.1);
 
     }
 
