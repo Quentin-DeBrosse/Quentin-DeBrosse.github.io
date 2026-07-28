@@ -988,14 +988,21 @@ footer p{
 
     transform-style:preserve-3d;
     will-change:transform;
+
+    transform:
+        perspective(1000px)
+        rotateX(var(--rotateX, 0deg))
+        rotateY(var(--rotateY, 0deg));
+
     transition:
-        transform .18s ease,
+        transform .15s ease,
         box-shadow .25s ease,
         border-color .25s ease;
 
     cursor:default;
 
 }
+
 
 .feature-card:hover,
 .composition-card:hover,
