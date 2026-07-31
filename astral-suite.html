@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Astral Suite | Quentin DeBrosse</title>
+
+<link rel="stylesheet" href="style.css?v=200">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" href="favicon.png">
+
+</head>
+
+<body>
+
+<div class="ambient-background"></div>
+
+<div class="particles">
+
+<span></span><span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span><span></span>
+
+</div>
+
+
+
+
+
+<nav>
+
+<h2>QD</h2>
+
+<div>
+
+<a href="index.html">Home</a>
+
+<a href="bio.html">Bio</a>
+
+<a href="compositions.html">Compositions</a>
+
+<a href="astral-suite.html">Astral Suite</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+<section class="suite-hero">
+
+<p class="eyebrow">
+
+A FIVE MOVEMENT MUSICAL JOURNEY
+
+</p>
+
+<h1>
+
+The Astral Suite
+
+</h1>
+
+<p class="suite-description">
+
+A collection of five connected works exploring light, shadow, distance, and the vastness of space through the language of the wind ensemble.
+
+</p>
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="orbit-section">
+
+
+
+<div class="orbit-container">
+
+
+
+
+
+<svg class="orbit-ring" viewBox="0 0 600 600">
+
+
+
+<circle
+cx="300"
+cy="300"
+r="200"
+class="orbit-base"
+/>
+
+
+
+
+
+<path
+
+id="movement1"
+
+class="orbit-segment active"
+
+d="M300 100
+A200 200 0 0 1 490 238"
+
+/>
+
+
+
+
+
+<path
+
+id="movement2"
+
+class="orbit-segment active"
+
+d="M490 238
+A200 200 0 0 1 417 462"
+
+/>
+
+
+
+
+
+<path
+
+id="movement3"
+
+class="orbit-segment locked"
+
+d="M417 462
+A200 200 0 0 1 183 462"
+
+/>
+
+
+
+
+
+<path
+
+id="movement4"
+
+class="orbit-segment locked"
+
+d="M183 462
+A200 200 0 0 1 110 238"
+
+/>
+
+
+
+
+
+<path
+
+id="movement5"
+
+class="orbit-segment locked"
+
+d="M110 238
+A200 200 0 0 1 300 100"
+
+/>
+
+</svg>
+
+
+
+
+
+
+
+
+<div class="suite-center">
+
+<h2>
+
+THE<br>
+
+ASTRAL<br>
+
+SUITE
+
+</h2>
+
+<p>
+
+Five Movements
+
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<button class="planet planet1 aphelion-planet" data-target="aphelion">
+
+<span>
+
+Aphelion
+
+</span>
+
+</button>
+
+
+
+
+
+<button class="planet planet2 umbra-planet" data-target="umbra">
+
+<span>
+
+Umbra
+
+</span>
+
+</button>
+
+
+
+
+
+<button class="planet locked planet3" data-target="locked">
+
+<span>
+?
+</span>
+
+</button>
+
+
+<button class="planet locked planet4" data-target="locked2">
+
+<span>
+?
+</span>
+
+</button>
+
+
+<button class="planet locked planet5" data-target="locked3">
+
+<span>
+?
+</span>
+
+</button>
+
+
+
+
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="movement-display">
+
+<div id="movement-content">
+
+<div class="movement-panel active-panel"
+
+id="aphelion">
+
+<h2>
+
+Aphelion
+
+</h2>
+
+<p class="movement-subtitle">
+
+Movement I
+
+</p>
+
+<p>
+
+A musical exploration of light, distance, and the unknown. The opening movement represents reaching the furthest point from warmth while discovering something greater beyond the familiar.
+
+</p>
+
+<div class="movement-meta">
+
+<div>
+
+<strong>Duration</strong>
+
+<br>
+
+5:30
+
+</div>
+
+<div>
+
+<strong>Instrumentation</strong>
+
+<br>
+
+Concert Band
+
+</div>
+
+<div>
+
+<strong>Status</strong>
+
+<br>
+
+Completed
+
+</div>
+
+</div>
+
+<audio controls preload="metadata">
+
+<source src="audio/aphelion.mp3" type="audio/mpeg">
+
+</audio>
+
+<div class="buttons">
+
+<a class="button"
+
+href="scores/aphelion.pdf"
+
+target="_blank">
+
+View Score
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="movement-panel"
+
+id="umbra">
+
+
+
+<h2>
+
+Umbra
+
+</h2>
+
+
+<p class="movement-subtitle">
+
+Movement II
+
+</p>
+
+
+
+
+<p>
+
+The second movement of the Astral Suite explores contrast, shadow, and the moments between darkness and light. Where Aphelion reaches outward, Umbra turns inward.
+
+</p>
+
+
+
+
+<div class="movement-meta">
+
+
+<div>
+
+<strong>
+Duration
+</strong>
+
+<br>
+
+~2:50
+
+</div>
+
+
+
+<div>
+
+<strong>
+Instrumentation
+</strong>
+
+<br>
+
+Concert Band
+
+</div>
+
+
+
+<div>
+
+<strong>
+Status
+</strong>
+
+<br>
+
+Completed
+
+</div>
+
+
+</div>
+
+
+
+
+
+<audio controls preload="metadata">
+
+<source src="audio/umbra.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+
+
+<div class="buttons">
+
+
+<a class="button"
+
+href="scores/umbra.pdf"
+
+target="_blank">
+
+View Score
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="movement-panel locked-panel"
+
+id="locked">
+
+
+<h2>
+
+???
+
+</h2>
+
+
+
+<p class="movement-subtitle">
+
+Movement III
+
+</p>
+
+
+
+<p>
+
+This movement has not yet been revealed.
+
+</p>
+
+
+
+<div class="locked-message">
+
+COMING SOON
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="movement-panel locked-panel"
+
+id="locked2">
+
+
+<h2>
+
+???
+
+</h2>
+
+
+
+<p class="movement-subtitle">
+
+Movement IV
+
+</p>
+
+
+
+<p>
+
+A future chapter of the Astral Suite.
+
+</p>
+
+
+
+<div class="locked-message">
+
+COMING SOON
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="movement-panel locked-panel"
+
+id="locked3">
+
+
+<h2>
+
+???
+
+</h2>
+
+
+
+<p class="movement-subtitle">
+
+Movement V
+
+</p>
+
+
+
+<p>
+
+The final movement remains unwritten.
+
+</p>
+
+
+
+<div class="locked-message">
+
+COMING SOON
+
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<footer>
+
+
+<h2>
+
+Quentin DeBrosse
+
+</h2>
+
+
+
+<p>
+
+Composer • Conductor • Trombonist
+
+</p>
+
+
+
+
+
+<div class="footer-links">
+
+
+<a href="index.html">
+
+Home
+
+</a>
+
+
+
+<a href="compositions.html">
+
+Compositions
+
+</a>
+
+
+
+<a href="bio.html">
+
+Bio
+
+</a>
+
+
+
+<a href="astral-suite.html">
+
+Astral Suite
+
+</a>
+
+
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+<p class="copyright">
+
+© 2026 Quentin DeBrosse. All rights reserved.
+
+</p>
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+const planets = document.querySelectorAll(".planet:not(.locked)");
+
+const panels = document.querySelectorAll(".movement-panel");
+
+
+planets.forEach(planet => {
+
+
+planet.addEventListener("click", () => {
+
+
+const target = planet.dataset.target;
+
+
+
+panels.forEach(panel => {
+
+
+panel.classList.remove("active-panel");
+
+
+});
+
+
+
+document
+.getElementById(target)
+.classList.add("active-panel");
+
+
+
+});
+
+
+
+});
+
+
+
+
+
+const locked = document.querySelectorAll(".planet.locked");
+
+
+locked.forEach(planet => {
+
+planet.addEventListener("click", () => {
+
+const target = planet.dataset.target;
+
+
+panels.forEach(panel => {
+
+panel.classList.remove("active-panel");
+
+});
+
+
+document
+.getElementById(target)
+.classList.add("active-panel");
+
+
+});
+
+});
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+</html>
