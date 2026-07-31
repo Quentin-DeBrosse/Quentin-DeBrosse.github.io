@@ -810,9 +810,22 @@ panel.classList.remove("active-panel");
 
 
 
-document
-.getElementById(target)
-.classList.add("active-panel");
+const selectedPanel = document.getElementById(target);
+
+selectedPanel.classList.add("active-panel");
+
+
+setTimeout(() => {
+
+    selectedPanel.scrollIntoView({
+
+        behavior:"smooth",
+
+        block:"center"
+
+    });
+
+},300);
 
 
 
