@@ -2742,3 +2742,32 @@ audio{
 
 
 }
+
+.preview-planet{
+
+    background:
+    radial-gradient(circle,#ffd86b,#8a5b00);
+
+    color:white;
+
+    box-shadow:
+    0 0 35px #d4af37,
+    0 0 90px rgba(255,190,50,.5);
+
+}
+
+
+
+.preview-panel{
+
+    border-color:#d4af37;
+
+}
+
+
+
+.preview-panel .locked-message{
+
+    color:#d4af37;
+
+}
