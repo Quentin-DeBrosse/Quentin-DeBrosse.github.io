@@ -2772,3 +2772,374 @@ audio{
 
 }
 
+/* =========================
+   ASTRAL SUITE LIFE EFFECTS
+========================= */
+
+
+/* Floating celestial atmosphere */
+
+.orbit-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:900px;
+    height:900px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(212,175,55,.18),
+        transparent 65%
+    );
+
+    filter:blur(40px);
+
+    animation:
+    cosmicPulse 10s infinite ease-in-out;
+
+    z-index:-1;
+
+}
+
+
+
+@keyframes cosmicPulse{
+
+    0%,100%{
+
+        transform:scale(1);
+        opacity:.5;
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+        opacity:1;
+
+    }
+
+}
+
+
+
+/* Make planets breathe */
+
+.planet{
+
+    animation:
+    planetFloat 6s infinite ease-in-out;
+
+}
+
+
+
+.planet1{
+
+    animation-delay:0s;
+
+}
+
+
+.planet2{
+
+    animation-delay:1.5s;
+
+}
+
+
+.planet3{
+
+    animation-delay:3s;
+
+}
+
+
+.planet4{
+
+    animation-delay:4.5s;
+
+}
+
+
+.planet5{
+
+    animation-delay:6s;
+
+}
+
+
+
+@keyframes planetFloat{
+
+    0%,100%{
+
+        margin-top:0;
+
+    }
+
+
+    50%{
+
+        margin-top:-12px;
+
+    }
+
+}
+
+
+
+/* Completed planets feel active */
+
+
+.aphelion-planet{
+
+    animation:
+
+    starGlow 4s infinite ease-in-out;
+
+}
+
+
+
+.umbra-planet{
+
+    animation:
+
+    shadowPulse 6s infinite ease-in-out;
+
+}
+
+
+
+@keyframes starGlow{
+
+    0%,100%{
+
+        filter:brightness(1);
+
+    }
+
+
+    50%{
+
+        filter:brightness(1.5);
+
+    }
+
+}
+
+
+
+@keyframes shadowPulse{
+
+    0%,100%{
+
+        filter:brightness(.8);
+
+    }
+
+
+    50%{
+
+        filter:brightness(1.2);
+
+    }
+
+}
+
+
+
+
+
+/* Perihelion preview feels like a sun */
+
+
+.preview-planet{
+
+    animation:
+
+    sunPulse 4s infinite ease-in-out;
+
+}
+
+
+
+@keyframes sunPulse{
+
+
+    0%,100%{
+
+        box-shadow:
+        0 0 30px #ffb347,
+        0 0 70px rgba(255,180,70,.4);
+
+    }
+
+
+    50%{
+
+        box-shadow:
+        0 0 80px #ffd27d,
+        0 0 140px rgba(255,180,70,.7);
+
+    }
+
+
+}
+
+
+
+
+
+/* Movement cards fade like entering a new chapter */
+
+
+.movement-panel.active-panel{
+
+    animation:
+
+    revealMovement .8s ease;
+
+}
+
+
+
+@keyframes revealMovement{
+
+
+    from{
+
+        opacity:0;
+        transform:
+        translateY(50px)
+        scale(.96);
+
+    }
+
+
+    to{
+
+        opacity:1;
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+
+}
+
+
+
+
+
+/* Audio player glow */
+
+.movement-panel audio{
+
+    border-radius:20px;
+
+    box-shadow:
+
+    0 0 30px rgba(212,175,55,.2);
+
+}
+
+
+
+
+
+/* Orbit ring shimmer */
+
+
+.orbit-segment.active{
+
+    animation:
+
+    ringGlow 5s infinite ease-in-out;
+
+}
+
+
+
+@keyframes ringGlow{
+
+
+    0%,100%{
+
+        opacity:.7;
+
+    }
+
+
+    50%{
+
+        opacity:1;
+
+    }
+
+
+}
+
+
+
+
+
+/* Little cinematic hover */
+
+
+.planet:hover span{
+
+    letter-spacing:2px;
+
+    transition:.4s;
+
+}
+
+
+
+/* Smooth page entrance */
+
+
+.suite-hero,
+.orbit-section,
+.movement-display{
+
+    animation:
+
+    pageReveal 1.5s ease;
+
+}
+
+
+
+@keyframes pageReveal{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+
+}
