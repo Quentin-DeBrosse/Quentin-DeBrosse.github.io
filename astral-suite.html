@@ -785,7 +785,7 @@ Contact
 <script>
 
 
-const planets = document.querySelectorAll(".planet:not(.locked)");
+const planets = document.querySelectorAll(".planet");
 
 const panels = document.querySelectorAll(".movement-panel");
 
@@ -824,33 +824,6 @@ document
 
 
 
-
-
-const locked = document.querySelectorAll(".planet.locked");
-
-
-locked.forEach(planet => {
-
-planet.addEventListener("click", () => {
-
-const target = planet.dataset.target;
-
-
-panels.forEach(panel => {
-
-panel.classList.remove("active-panel");
-
-});
-
-
-document
-.getElementById(target)
-.classList.add("active-panel");
-
-
-});
-
-});
 
 
 
