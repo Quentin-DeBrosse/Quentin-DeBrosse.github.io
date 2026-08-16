@@ -3941,3 +3941,633 @@ body:has(.orbit-section)::marker{
     );
 
 }
+
+/* =========================================
+   MOBILE — COMPLETE RESPONSIVE OVERHAUL
+========================================= */
+
+@media (max-width: 900px){
+
+    /* -------------------------
+       GLOBAL
+    ------------------------- */
+
+    html{
+        overflow-x:hidden;
+    }
+
+    body{
+        width:100%;
+        overflow-x:hidden;
+    }
+
+
+    /* -------------------------
+       NAVIGATION
+    ------------------------- */
+
+    nav{
+        height:auto;
+        min-height:70px;
+        padding:18px 6%;
+        flex-direction:column;
+        gap:18px;
+        text-align:center;
+    }
+
+    nav h2{
+        margin:0;
+        font-size:24px;
+    }
+
+    nav div{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:wrap;
+        gap:10px 20px;
+        width:100%;
+    }
+
+    nav a{
+        margin:0;
+        font-size:13px;
+        letter-spacing:.5px;
+    }
+
+
+    /* -------------------------
+       GLOBAL TYPOGRAPHY
+    ------------------------- */
+
+    .eyebrow{
+        font-size:11px;
+        letter-spacing:3px;
+        line-height:1.6;
+    }
+
+    h1{
+        word-break:normal;
+    }
+
+    .button{
+        padding:13px 24px;
+        font-size:14px;
+    }
+
+
+    /* -------------------------
+       HERO
+    ------------------------- */
+
+    .hero{
+        min-height:calc(100vh - 130px);
+        height:auto;
+        padding:90px 7%;
+        align-items:center;
+    }
+
+    .hero-content{
+        width:100%;
+    }
+
+    .hero h1{
+        font-size:clamp(55px, 16vw, 90px);
+        line-height:.88;
+        margin:20px 0;
+        letter-spacing:-2px;
+    }
+
+    .hero-description{
+        font-size:17px;
+        line-height:1.7;
+        max-width:100%;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:stretch;
+        gap:12px;
+        margin-top:30px;
+    }
+
+    .hero-buttons .button{
+        text-align:center;
+        width:100%;
+    }
+
+
+    /* -------------------------
+       HERO BACKGROUND
+    ------------------------- */
+
+    .background-shape{
+        width:350px;
+        height:350px;
+        right:-180px;
+        top:100px;
+    }
+
+
+    /* -------------------------
+       FEATURED
+    ------------------------- */
+
+    .featured{
+        padding:70px 7%;
+    }
+
+    .featured h2{
+        font-size:38px;
+        margin-bottom:30px;
+    }
+
+    .feature-card{
+        padding:30px 25px;
+        border-radius:20px;
+    }
+
+    .feature-card h3{
+        font-size:clamp(45px, 14vw, 70px);
+        line-height:.9;
+    }
+
+
+    /* -------------------------
+       QUICK LINKS
+    ------------------------- */
+
+    .quick-links{
+        grid-template-columns:1fr;
+        gap:18px;
+        padding:0 7% 70px;
+    }
+
+    .quick-links a{
+        padding:28px;
+        border-radius:20px;
+    }
+
+    .quick-links h3{
+        font-size:27px;
+    }
+
+
+    /* -------------------------
+       COMPOSITIONS
+    ------------------------- */
+
+    .composition-page{
+        padding:70px 7%;
+    }
+
+    .composition-header{
+        margin-bottom:40px;
+    }
+
+    .composition-header h1{
+        font-size:clamp(50px, 14vw, 75px);
+        line-height:.9;
+        margin:18px 0;
+    }
+
+    .composition-header p{
+        font-size:17px;
+        line-height:1.6;
+    }
+
+    .composition-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .composition-card{
+        padding:20px;
+        border-radius:20px;
+    }
+
+    .score-preview{
+        height:350px;
+        border-radius:14px;
+    }
+
+    .tags{
+        flex-wrap:wrap;
+        gap:8px;
+    }
+
+    .tags span{
+        font-size:11px;
+        padding:6px 11px;
+    }
+
+    .composition-card h2{
+        font-size:40px;
+        line-height:1;
+    }
+
+    .composition-card h3{
+        font-size:16px;
+    }
+
+    .composition-card p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .info{
+        grid-template-columns:1fr 1fr;
+        gap:20px;
+        font-size:14px;
+        line-height:1.6;
+    }
+
+    .buttons{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .buttons .button{
+        width:100%;
+        text-align:center;
+    }
+
+    .composition-card audio{
+        width:100%;
+    }
+
+
+    /* -------------------------
+       BIO
+    ------------------------- */
+
+    .bio-hero{
+        min-height:60vh;
+        padding:80px 7%;
+    }
+
+    .bio-hero h1{
+        font-size:clamp(55px, 16vw, 90px);
+        line-height:.88;
+    }
+
+    .bio-section{
+        padding:50px 7%;
+    }
+
+    .bio-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+        padding:0 7% 60px;
+    }
+
+    .bio-card{
+        padding:30px 25px;
+        border-radius:20px;
+    }
+
+    .bio-card h2{
+        font-size:32px;
+    }
+
+    .bio-card p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+
+    /* -------------------------
+       CONTACT
+    ------------------------- */
+
+    .contact-page{
+        padding:70px 7%;
+    }
+
+    .contact-header{
+        width:100%;
+        margin-bottom:40px;
+    }
+
+    .contact-header h1{
+        font-size:clamp(55px, 16vw, 90px);
+        line-height:.9;
+    }
+
+    .contact-header p{
+        font-size:17px;
+        line-height:1.7;
+    }
+
+    .contact-card{
+        padding:30px 25px;
+        border-radius:20px;
+    }
+
+    .contact-card h2{
+        font-size:34px;
+    }
+
+    .contact-card p{
+        font-size:16px;
+    }
+
+    .contact-links{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .contact-links a{
+        width:100%;
+        text-align:center;
+    }
+
+
+    /* -------------------------
+       FOOTER
+    ------------------------- */
+
+    footer{
+        padding:50px 7% 30px;
+    }
+
+    footer h2{
+        font-size:28px;
+    }
+
+    .footer-links{
+        flex-wrap:wrap;
+        gap:15px 25px;
+    }
+
+    .footer-links a{
+        font-size:14px;
+    }
+
+
+    /* -------------------------
+       PARTICLES
+    ------------------------- */
+
+    .particles span{
+        width:3px;
+        height:3px;
+    }
+
+
+    /* -------------------------
+       CARD ANIMATIONS
+    ------------------------- */
+
+    .feature-card,
+    .composition-card,
+    .bio-card,
+    .contact-card,
+    .quick-links a{
+
+        animation:none;
+
+    }
+
+    .feature-card:hover,
+    .composition-card:hover,
+    .bio-card:hover,
+    .contact-card:hover,
+    .quick-links a:hover{
+
+        transform:none;
+
+    }
+
+
+    /* -------------------------
+       3D EFFECT
+    ------------------------- */
+
+    .feature-card,
+    .composition-card,
+    .bio-card,
+    .contact-card,
+    .quick-links a{
+
+        transform:
+            perspective(1000px)
+            rotateX(0deg)
+            rotateY(0deg);
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 500px){
+
+    nav{
+        padding:16px 5%;
+    }
+
+    nav div{
+        gap:8px 14px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .hero{
+        padding:75px 6%;
+    }
+
+    .hero h1{
+        font-size:18vw;
+    }
+
+    .featured{
+        padding:60px 6%;
+    }
+
+    .quick-links{
+        padding-left:6%;
+        padding-right:6%;
+    }
+
+    .composition-page{
+        padding-left:6%;
+        padding-right:6%;
+    }
+
+    .composition-card{
+        padding:17px;
+    }
+
+    .score-preview{
+        height:300px;
+    }
+
+    .info{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .bio-grid{
+        padding-left:6%;
+        padding-right:6%;
+    }
+
+    .contact-page{
+        padding-left:6%;
+        padding-right:6%;
+    }
+
+}
+
+/* =========================================
+   ASTRAL SUITE — MOBILE
+========================================= */
+
+@media (max-width:900px){
+
+    .suite-hero{
+        padding:80px 7% 40px;
+        text-align:center;
+    }
+
+    .suite-hero h1{
+        font-size:clamp(48px, 14vw, 75px);
+        line-height:.9;
+    }
+
+    .suite-description{
+        font-size:16px;
+        line-height:1.7;
+        max-width:100%;
+    }
+
+
+    .orbit-section{
+        min-height:auto;
+        padding:30px 0 70px;
+        overflow:hidden;
+    }
+
+
+    .orbit-container{
+
+        width:min(94vw, 520px);
+        height:min(94vw, 520px);
+
+        margin:auto;
+
+        position:relative;
+
+    }
+
+
+    .orbit-ring{
+
+        width:100%;
+        height:100%;
+
+    }
+
+
+    .suite-center h2{
+
+        font-size:22px;
+        line-height:1;
+
+        letter-spacing:3px;
+
+    }
+
+
+    .suite-center p{
+
+        font-size:11px;
+
+    }
+
+
+    .planet{
+
+        transform:scale(.8);
+
+    }
+
+
+    .movement-display{
+
+        padding:0 7% 70px;
+
+    }
+
+
+    .movement-panel{
+
+        width:100%;
+        padding:30px 25px;
+
+        border-radius:20px;
+
+    }
+
+
+    .movement-panel h2{
+
+        font-size:40px;
+
+    }
+
+
+    .movement-panel p{
+
+        font-size:15px;
+        line-height:1.7;
+
+    }
+
+
+    .movement-meta{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+
+    .movement-panel audio{
+
+        width:100%;
+
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .orbit-container{
+
+        width:94vw;
+        height:94vw;
+
+    }
+
+    .planet{
+
+        transform:scale(.68);
+
+    }
+
+    .suite-center h2{
+
+        font-size:18px;
+
+    }
+
+}
