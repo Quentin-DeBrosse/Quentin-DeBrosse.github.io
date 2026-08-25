@@ -8,7 +8,7 @@
 
 <title>The Astral Suite | Quentin DeBrosse</title>
 
-<link rel="stylesheet" href="style.css?v=200">
+<link rel="stylesheet" href="style.css?v=202">
 
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="shortcut icon" href="favicon.png">
@@ -26,9 +26,6 @@
 <span></span><span></span><span></span><span></span><span></span>
 
 </div>
-
-
-
 
 
 <nav>
@@ -53,27 +50,19 @@
 
 
 
-
-
-
-
 <section class="suite-hero">
 
 <p class="eyebrow">
-
 A FIVE MOVEMENT MUSICAL JOURNEY
-
 </p>
 
 <h1>
-
 The Astral Suite
-
 </h1>
 
 <p class="suite-description">
 
-A collection of five connected works exploring light, shadow, distance, and the vastness of space through the language of the wind ensemble.
+A collection of five connected works exploring light, shadow, distance, warmth, elevation, and reconnection through the language of the wind ensemble.
 
 </p>
 
@@ -81,25 +70,12 @@ A collection of five connected works exploring light, shadow, distance, and the 
 
 
 
-
-
-
-
-
-
 <section class="orbit-section">
-
-
 
 <div class="orbit-container">
 
 
-
-
-
 <svg class="orbit-ring" viewBox="0 0 600 600">
-
-
 
 <circle
 cx="300"
@@ -109,147 +85,122 @@ class="orbit-base"
 />
 
 
-
-
+<!-- MOVEMENT I -->
 
 <path
-
 id="movement1"
-
 class="orbit-segment active"
-
 d="M300 100
 A200 200 0 0 1 490 238"
-
 />
 
 
-
-
+<!-- MOVEMENT II -->
 
 <path
-
 id="movement2"
-
 class="orbit-segment active"
-
 d="M490 238
 A200 200 0 0 1 417 462"
-
 />
 
 
-
-
+<!-- MOVEMENT III -->
 
 <path
-
 id="movement3"
-
-class="orbit-segment locked"
-
+class="orbit-segment active"
 d="M417 462
 A200 200 0 0 1 183 462"
-
 />
 
 
-
-
+<!-- MOVEMENT IV -->
 
 <path
-
 id="movement4"
-
-class="orbit-segment locked"
-
+class="orbit-segment preview-segment"
 d="M183 462
 A200 200 0 0 1 110 238"
-
 />
 
 
-
-
+<!-- MOVEMENT V -->
 
 <path
-
 id="movement5"
-
 class="orbit-segment locked"
-
 d="M110 238
 A200 200 0 0 1 300 100"
-
 />
 
 </svg>
 
 
 
-
-
-
-
-
 <div class="suite-center">
 
 <h2>
-
 THE<br>
-
 ASTRAL<br>
-
 SUITE
-
 </h2>
 
 <p>
-
 Five Movements
-
 </p>
 
 </div>
 
 
 
+<!-- APHELION -->
 
-
-
-
-
-
-
-<button class="planet planet1 aphelion-planet" data-target="aphelion">
+<button
+class="planet planet1 aphelion-planet"
+data-target="aphelion">
 
 <span>
-
 Aphelion
-
 </span>
 
 </button>
 
 
 
+<!-- UMBRA -->
 
-
-<button class="planet planet2 umbra-planet" data-target="umbra">
+<button
+class="planet planet2 umbra-planet"
+data-target="umbra">
 
 <span>
-
 Umbra
-
 </span>
 
 </button>
 
 
 
+<!-- PERIHELION -->
+
+<button
+class="planet planet3 perihelion-planet"
+data-target="perihelion">
+
+<span>
+Perihelion
+</span>
+
+</button>
 
 
-<button class="planet preview-planet planet3" data-target="preview">
+
+<!-- ZENITH PREVIEW -->
+
+<button
+class="planet planet4 preview-planet zenith-planet"
+data-target="zenith-preview">
 
 <span>
 ?
@@ -258,27 +209,18 @@ Umbra
 </button>
 
 
-<button class="planet locked planet4" data-target="locked2">
+
+<!-- MOVEMENT V -->
+
+<button
+class="planet locked planet5"
+data-target="locked3">
 
 <span>
 ?
 </span>
 
 </button>
-
-
-<button class="planet locked planet5" data-target="locked3">
-
-<span>
-?
-</span>
-
-</button>
-
-
-
-
-
 
 
 </div>
@@ -287,30 +229,24 @@ Umbra
 
 
 
-
-
-
-
-
-
 <section class="movement-display">
 
 <div id="movement-content">
 
-<div class="movement-panel active-panel"
 
+
+<!-- APHELION -->
+
+<div
+class="movement-panel active-panel"
 id="aphelion">
 
 <h2>
-
 Aphelion
-
 </h2>
 
 <p class="movement-subtitle">
-
 Movement I
-
 </p>
 
 <p>
@@ -323,114 +259,15 @@ A musical exploration of light, distance, and the unknown. The opening movement 
 
 <div>
 
-<strong>Duration</strong>
-
-<br>
-
-5:30
-
-</div>
-
-<div>
-
-<strong>Instrumentation</strong>
-
-<br>
-
-Concert Band
-
-</div>
-
-<div>
-
-<strong>Status</strong>
-
-<br>
-
-Completed
-
-</div>
-
-</div>
-
-<audio controls preload="metadata">
-
-<source src="audio/aphelion.mp3" type="audio/mpeg">
-
-</audio>
-
-<div class="buttons">
-
-<a class="button"
-
-href="scores/aphelion.pdf"
-
-target="_blank">
-
-View Score
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="movement-panel"
-
-id="umbra">
-
-
-
-<h2>
-
-Umbra
-
-</h2>
-
-
-<p class="movement-subtitle">
-
-Movement II
-
-</p>
-
-
-
-
-<p>
-
-The second movement of the Astral Suite explores contrast, shadow, and the moments between darkness and light. Where Aphelion reaches outward, Umbra turns inward.
-
-</p>
-
-
-
-
-<div class="movement-meta">
-
-
-<div>
-
 <strong>
 Duration
 </strong>
 
 <br>
 
-~2:50
+~5:30
 
 </div>
-
-
 
 <div>
 
@@ -444,7 +281,90 @@ Concert Band
 
 </div>
 
+<div>
 
+<strong>
+Status
+</strong>
+
+<br>
+
+Completed
+
+</div>
+
+</div>
+
+<audio controls preload="metadata">
+
+<source
+src="audio/aphelion.mp3"
+type="audio/mpeg">
+
+</audio>
+
+<div class="buttons">
+
+<a
+class="button"
+href="scores/aphelion.pdf"
+target="_blank">
+
+View Score
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- UMBRA -->
+
+<div
+class="movement-panel"
+id="umbra">
+
+<h2>
+Umbra
+</h2>
+
+<p class="movement-subtitle">
+Movement II
+</p>
+
+<p>
+
+The second movement of the Astral Suite explores contrast, shadow, and the moments between darkness and light. Where Aphelion reaches outward, Umbra turns inward.
+
+</p>
+
+<div class="movement-meta">
+
+<div>
+
+<strong>
+Duration
+</strong>
+
+<br>
+
+~2:50
+
+</div>
+
+<div>
+
+<strong>
+Instrumentation
+</strong>
+
+<br>
+
+Concert Band
+
+</div>
 
 <div>
 
@@ -458,80 +378,141 @@ Completed
 
 </div>
 
-
 </div>
-
-
-
-
 
 <audio controls preload="metadata">
 
-<source src="audio/umbra.mp3" type="audio/mpeg">
+<source
+src="audio/umbra.mp3"
+type="audio/mpeg">
 
 </audio>
 
-
-
-
-
 <div class="buttons">
 
-
-<a class="button"
-
+<a
+class="button"
 href="scores/umbra.pdf"
-
 target="_blank">
 
 View Score
 
 </a>
 
+</div>
 
 </div>
 
 
 
-</div>
+<!-- PERIHELION -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="movement-panel preview-panel"
-
-id="preview">
-
+<div
+class="movement-panel"
+id="perihelion">
 
 <h2>
-???
+Perihelion
 </h2>
-
 
 <p class="movement-subtitle">
 Movement III
 </p>
 
-
 <p>
-A movement centered around warmth, return, and reconnection. 
-After traveling through distance and shadow, this chapter begins the journey back toward light — rediscovering familiarity, comfort, and the connections that remain across time and space.
+
+A return toward warmth and light. Perihelion explores reconnection, renewal, and the feeling of finding your way back to something familiar.
+
 </p>
-
-
 
 <div class="movement-meta">
 
+<div>
+
+<strong>
+Duration
+</strong>
+
+<br>
+
+~4:00
+
+</div>
+
+<div>
+
+<strong>
+Instrumentation
+</strong>
+
+<br>
+
+Concert Band
+
+</div>
+
+<div>
+
+<strong>
+Status
+</strong>
+
+<br>
+
+Completed
+
+</div>
+
+</div>
+
+<audio controls preload="metadata">
+
+<source
+src="audio/perihelion.mp3"
+type="audio/mpeg">
+
+</audio>
+
+<div class="buttons">
+
+<a
+class="button"
+href="scores/perihelion.pdf"
+target="_blank">
+
+View Score
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ZENITH PREVIEW -->
+
+<div
+class="movement-panel preview-panel zenith-preview-panel"
+id="zenith-preview">
+
+<h2>
+???
+</h2>
+
+<p class="movement-subtitle">
+Movement IV
+</p>
+
+<p>
+
+After the warmth of return comes a moment of arrival — a point where distance gives way to perspective, and the world below suddenly feels different.
+
+This chapter explores elevation, clarity, and the feeling of reaching a place where everything can finally be seen from above.
+
+</p>
+
+<div class="movement-meta">
 
 <div>
 
@@ -545,7 +526,6 @@ In Progress
 
 </div>
 
-
 <div>
 
 <strong>
@@ -554,10 +534,9 @@ Theme
 
 <br>
 
-Warmth & Reconnection
+Elevation & Perspective
 
 </div>
-
 
 <div>
 
@@ -571,9 +550,7 @@ Coming Soon
 
 </div>
 
-
 </div>
-
 
 <div class="locked-message">
 
@@ -581,83 +558,23 @@ PREVIEW ONLY
 
 </div>
 
-
 </div>
 
 
 
+<!-- MOVEMENT V -->
 
-
-
-
-
-
-<div class="movement-panel locked-panel"
-
-id="locked2">
-
-
-<h2>
-
-???
-
-</h2>
-
-
-
-<p class="movement-subtitle">
-
-Movement IV
-
-</p>
-
-
-
-<p>
-
-A future chapter of the Astral Suite.
-
-</p>
-
-
-
-<div class="locked-message">
-
-COMING SOON
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="movement-panel locked-panel"
-
+<div
+class="movement-panel locked-panel"
 id="locked3">
 
-
 <h2>
-
 ???
-
 </h2>
 
-
-
 <p class="movement-subtitle">
-
 Movement V
-
 </p>
-
-
 
 <p>
 
@@ -665,104 +582,54 @@ The final movement remains unwritten.
 
 </p>
 
-
-
 <div class="locked-message">
 
 COMING SOON
 
 </div>
 
-
 </div>
 
 
-
-
-
 </div>
-
 
 </section>
 
 
 
-
-
-
-
-
-
 <footer>
 
-
 <h2>
-
 Quentin DeBrosse
-
 </h2>
 
-
-
 <p>
-
 Composer • Conductor • Trombonist
-
 </p>
-
-
-
-
 
 <div class="footer-links">
 
-
 <a href="index.html">
-
 Home
-
 </a>
-
-
 
 <a href="compositions.html">
-
 Compositions
-
 </a>
-
-
 
 <a href="bio.html">
-
 Bio
-
 </a>
-
-
 
 <a href="astral-suite.html">
-
 Astral Suite
-
 </a>
-
-
 
 <a href="contact.html">
-
 Contact
-
 </a>
 
-
-
 </div>
-
-
-
-
-
 
 <p class="copyright">
 
@@ -770,20 +637,11 @@ Contact
 
 </p>
 
-
-
 </footer>
 
 
 
-
-
-
-
-
-
 <script>
-
 
 const planets = document.querySelectorAll(".planet");
 
@@ -792,58 +650,42 @@ const panels = document.querySelectorAll(".movement-panel");
 
 planets.forEach(planet => {
 
-
 planet.addEventListener("click", () => {
-
 
 const target = planet.dataset.target;
 
 
-
 panels.forEach(panel => {
 
-
 panel.classList.remove("active-panel");
-
 
 });
 
 
-
 const selectedPanel = document.getElementById(target);
+
+if (!selectedPanel) return;
 
 selectedPanel.classList.add("active-panel");
 
 
 setTimeout(() => {
 
-    selectedPanel.scrollIntoView({
+selectedPanel.scrollIntoView({
 
-        behavior:"smooth",
+behavior: "smooth",
 
-        block:"center"
-
-    });
-
-},300);
-
-
+block: "center"
 
 });
 
-
+}, 300);
 
 });
 
-
-
-
-
+});
 
 </script>
-
-
-
 
 
 </body>
