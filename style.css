@@ -4749,128 +4749,132 @@ body:has(.orbit-section)::marker{
 
 }
 
-/* =====================
+/* =========================
    ZENITH — COLORFUL CELESTIAL
-===================== */
+========================= */
 
-.zenith-planet{
+button.zenith-planet{
+
+    position:relative;
 
     background:
         radial-gradient(
-            circle at 32% 25%,
+            circle at 30% 25%,
             #ffffff 0%,
-            #8ffcff 8%,
-            #24d9ff 22%,
-            transparent 42%
+            #8fffff 9%,
+            #20dfff 23%,
+            transparent 43%
         ),
         radial-gradient(
-            circle at 75% 65%,
-            #ff4fd8 0%,
-            #a33cff 28%,
-            transparent 58%
+            circle at 75% 70%,
+            #ff55d8 0%,
+            #a43cff 30%,
+            transparent 60%
         ),
         radial-gradient(
-            circle at 25% 80%,
-            #5b4dff 0%,
-            #24145f 45%,
-            transparent 75%
+            circle at 20% 80%,
+            #405cff 0%,
+            #181052 48%,
+            transparent 80%
         ),
         conic-gradient(
             from 120deg,
-            #1b0b4f,
-            #5b21b6,
-            #e42cff,
+            #16083f,
+            #5720b8,
+            #e02cff,
             #ff4f9a,
             #21e6ff,
-            #244cff,
-            #1b0b4f
-        );
+            #304cff,
+            #16083f
+        ) !important;
 
-    border:1px solid #c9f7ff !important;
+    border:2px solid #d8faff !important;
 
-    color:white !important;
+    color:#ffffff !important;
+
+    /* IMPORTANT:
+       This transition controls the smooth hover.
+       No animation is allowed to change transform.
+    */
+
+    transition:
+        transform .6s cubic-bezier(.2,.8,.2,1),
+        box-shadow .6s ease,
+        filter .6s ease;
 
     box-shadow:
-        0 0 15px rgba(50,220,255,.8),
-        0 0 35px rgba(180,50,255,.65),
-        0 0 70px rgba(255,50,190,.35);
+        0 0 18px rgba(0,220,255,.85),
+        0 0 42px rgba(170,50,255,.65),
+        0 0 75px rgba(255,40,200,.35);
 
     animation:
-        zenithColors 7s linear infinite,
-        zenithPulse 4s ease-in-out infinite;
+        zenithColors 8s linear infinite,
+        zenithGlow 4s ease-in-out infinite;
 
 }
 
 
-/* COLOR MOVEMENT */
+/* =========================
+   SLOW COLOR SHIFT
+========================= */
 
 @keyframes zenithColors{
 
     0%{
-
         filter:hue-rotate(0deg);
-
     }
 
     25%{
-
-        filter:hue-rotate(25deg);
-
+        filter:hue-rotate(20deg);
     }
 
     50%{
-
-        filter:hue-rotate(-20deg);
-
+        filter:hue-rotate(-15deg);
     }
 
     75%{
-
-        filter:hue-rotate(35deg);
-
+        filter:hue-rotate(30deg);
     }
 
     100%{
-
         filter:hue-rotate(0deg);
-
     }
 
 }
 
 
-/* BREATHING GLOW */
+/* =========================
+   BREATHING GLOW
+========================= */
 
-@keyframes zenithPulse{
+@keyframes zenithGlow{
 
     0%,100%{
 
-        transform:scale(1);
-
         box-shadow:
-            0 0 15px rgba(50,220,255,.65),
-            0 0 35px rgba(180,50,255,.45),
-            0 0 65px rgba(255,50,190,.2);
+            0 0 18px rgba(0,220,255,.7),
+            0 0 42px rgba(170,50,255,.5),
+            0 0 75px rgba(255,40,200,.25);
 
     }
 
     50%{
 
-        transform:scale(1.06);
-
         box-shadow:
-            0 0 25px rgba(50,240,255,.95),
-            0 0 55px rgba(180,50,255,.75),
-            0 0 95px rgba(255,50,190,.4);
+            0 0 27px rgba(0,240,255,.95),
+            0 0 58px rgba(180,50,255,.75),
+            0 0 95px rgba(255,50,210,.45);
 
     }
 
 }
 
 
-/* EXTRA OUTER AURA */
+/* =========================
+   ROTATING AURA
+========================= */
 
-.zenith-planet::before{
+button.zenith-planet::before{
 
     content:"";
 
@@ -4881,145 +4885,75 @@ body:has(.orbit-section)::marker{
     border-radius:50%;
 
     background:
-
         conic-gradient(
             from 0deg,
             transparent,
-            rgba(0,230,255,.45),
+            rgba(0,230,255,.5),
             transparent,
-            rgba(255,50,220,.5),
+            rgba(255,50,220,.55),
             transparent,
-            rgba(100,80,255,.45),
+            rgba(100,80,255,.5),
             transparent
         );
 
-    filter:blur(5px);
+    filter:blur(6px);
 
     opacity:.7;
 
-    animation:zenithAura 5s linear infinite;
-
     z-index:-1;
+
+    animation:zenithAura 6s linear infinite;
 
 }
 
 
-/* ROTATING AURA */
+/* =========================
+   AURA ROTATION
+========================= */
 
 @keyframes zenithAura{
 
     from{
-
-        transform:rotate(0deg) scale(.95);
-
+        transform:rotate(0deg);
     }
 
     to{
-
-        transform:rotate(360deg) scale(1.08);
-
+        transform:rotate(360deg);
     }
 
 }
 
 
-/* HOVER = MORE CHAOS */
-
-.zenith-planet:hover{
-
-    transform:scale(1.12);
-
-    box-shadow:
-        0 0 30px rgba(50,240,255,1),
-        0 0 65px rgba(180,50,255,.9),
-        0 0 110px rgba(255,50,190,.6);
-
-}
-
 /* =========================
-   ZENITH — FORCE COLOR
+   SMOOTH HOVER
 ========================= */
-
-button.zenith-planet{
-    background:
-        radial-gradient(
-            circle at 30% 25%,
-            #ffffff 0%,
-            #7fffff 10%,
-            #00d9ff 25%,
-            transparent 45%
-        ),
-        radial-gradient(
-            circle at 75% 70%,
-            #ff35d1 0%,
-            #9b35ff 30%,
-            transparent 60%
-        ),
-        radial-gradient(
-            circle at 20% 80%,
-            #304cff 0%,
-            #151052 50%,
-            transparent 80%
-        ),
-        #21105c !important;
-
-    border:2px solid #d8faff !important;
-
-    color:#ffffff !important;
-
-    box-shadow:
-        0 0 20px rgba(0,220,255,.9),
-        0 0 45px rgba(170,50,255,.7),
-        0 0 80px rgba(255,40,200,.45) !important;
-
-    animation:
-        zenithColorShift 6s linear infinite,
-        zenithPulse 4s ease-in-out infinite !important;
-}
-
 
 button.zenith-planet:hover{
 
-    background:
-        radial-gradient(
-            circle at 30% 25%,
-            #ffffff 0%,
-            #a5ffff 12%,
-            #00eaff 30%,
-            transparent 50%
-        ),
-        radial-gradient(
-            circle at 75% 70%,
-            #ff65df 0%,
-            #b44cff 35%,
-            transparent 65%
-        ),
-        #24105f !important;
-
     transform:scale(1.12) !important;
+
+    filter:
+        brightness(1.15)
+        saturate(1.25);
 
     box-shadow:
         0 0 30px rgba(0,240,255,1),
         0 0 65px rgba(180,50,255,.9),
-        0 0 110px rgba(255,50,210,.65) !important;
+        0 0 110px rgba(255,50,210,.65);
+
 }
+
 
 /* =========================
-   ZENITH SMOOTH HOVER
+   MOBILE
 ========================= */
 
-button.zenith-planet{
+@media(max-width:900px){
 
-    transition:
-        transform .6s ease,
-        box-shadow .6s ease,
-        
-}
+    button.zenith-planet:hover{
 
+        transform:scale(1.05) !important;
 
-button.zenith-planet:hover{
-
-    transform:scale(1.12) !important;
-
+    }
 
 }
