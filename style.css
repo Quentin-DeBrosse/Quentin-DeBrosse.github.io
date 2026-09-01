@@ -5003,3 +5003,28 @@ button.zenith-planet:hover{
         0 0 65px rgba(180,50,255,.9),
         0 0 110px rgba(255,50,210,.65) !important;
 }
+
+/* =========================
+   ZENITH SMOOTH HOVER
+========================= */
+
+button.zenith-planet{
+
+    transition:
+        transform .6s cubic-bezier(.2,.8,.2,1),
+        box-shadow .6s ease,
+        filter .6s ease;
+
+}
+
+
+button.zenith-planet:hover{
+
+    transform:scale(1.12) !important;
+
+    transition:
+        transform .6s cubic-bezier(.2,.8,.2,1),
+        box-shadow .6s ease,
+        filter .6s ease;
+
+}
