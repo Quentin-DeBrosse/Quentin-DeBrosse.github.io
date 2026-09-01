@@ -4749,91 +4749,74 @@ body:has(.orbit-section)::marker{
 
 }
 
-/* =========================
-   ZENITH — COLORFUL CELESTIAL
-========================= */
+/* =========================================
+   ZENITH — COLORFUL CELESTIAL PLANET
+========================================= */
 
 button.zenith-planet{
-
-    position:relative;
+    position:absolute;
+    z-index:20;
 
     background:
         radial-gradient(
             circle at 30% 25%,
             #ffffff 0%,
             #8fffff 9%,
-            #20dfff 23%,
-            transparent 43%
+            #00d9ff 24%,
+            transparent 45%
         ),
         radial-gradient(
             circle at 75% 70%,
-            #ff55d8 0%,
+            #ff45d8 0%,
             #a43cff 30%,
-            transparent 60%
+            transparent 62%
         ),
         radial-gradient(
             circle at 20% 80%,
-            #405cff 0%,
-            #181052 48%,
+            #4055ff 0%,
+            #181052 52%,
             transparent 80%
         ),
-        conic-gradient(
-            from 120deg,
-            #16083f,
-            #5720b8,
-            #e02cff,
-            #ff4f9a,
-            #21e6ff,
-            #304cff,
-            #16083f
-        ) !important;
+        #21105c !important;
 
     border:2px solid #d8faff !important;
 
     color:#ffffff !important;
 
-    /* IMPORTANT:
-       This transition controls the smooth hover.
-       No animation is allowed to change transform.
-    */
+    box-shadow:
+        0 0 18px rgba(0,220,255,.85),
+        0 0 42px rgba(170,50,255,.65),
+        0 0 75px rgba(255,40,200,.4);
+
+    transform:scale(1);
 
     transition:
         transform .6s cubic-bezier(.2,.8,.2,1),
         box-shadow .6s ease,
         filter .6s ease;
 
-    box-shadow:
-        0 0 18px rgba(0,220,255,.85),
-        0 0 42px rgba(170,50,255,.65),
-        0 0 75px rgba(255,40,200,.35);
+    overflow:visible;
+
+    isolation:isolate;
 
     animation:
-        zenithColors 8s linear infinite,
+        zenithColorShift 8s linear infinite,
         zenithGlow 4s ease-in-out infinite;
-
 }
 
 
-/* =========================
-   SLOW COLOR SHIFT
-========================= */
+/* =========================================
+   COLOR SHIFT
+========================================= */
 
-@keyframes zenithColors{
+@keyframes zenithColorShift{
 
     0%{
         filter:hue-rotate(0deg);
     }
 
-    25%{
-        filter:hue-rotate(20deg);
-    }
-
     50%{
-        filter:hue-rotate(-15deg);
-    }
-
-    75%{
-        filter:hue-rotate(30deg);
+        filter:hue-rotate(25deg);
     }
 
     100%{
@@ -4843,36 +4826,36 @@ button.zenith-planet{
 }
 
 
-/* =========================
+/* =========================================
    BREATHING GLOW
-========================= */
+========================================= */
 
 @keyframes zenithGlow{
 
     0%,100%{
 
         box-shadow:
-            0 0 18px rgba(0,220,255,.7),
-            0 0 42px rgba(170,50,255,.5),
-            0 0 75px rgba(255,40,200,.25);
+            0 0 18px rgba(0,220,255,.8),
+            0 0 42px rgba(170,50,255,.55),
+            0 0 75px rgba(255,40,200,.3);
 
     }
 
     50%{
 
         box-shadow:
-            0 0 27px rgba(0,240,255,.95),
-            0 0 58px rgba(180,50,255,.75),
-            0 0 95px rgba(255,50,210,.45);
+            0 0 28px rgba(0,240,255,1),
+            0 0 60px rgba(180,60,255,.8),
+            0 0 100px rgba(255,50,210,.5);
 
     }
 
 }
 
 
-/* =========================
+/* =========================================
    ROTATING AURA
-========================= */
+========================================= */
 
 button.zenith-planet::before{
 
@@ -4880,7 +4863,7 @@ button.zenith-planet::before{
 
     position:absolute;
 
-    inset:-14px;
+    inset:-12px;
 
     border-radius:50%;
 
@@ -4896,37 +4879,35 @@ button.zenith-planet::before{
             transparent
         );
 
-    filter:blur(6px);
+    filter:blur(5px);
 
-    opacity:.7;
+    opacity:.75;
 
     z-index:-1;
+
+    pointer-events:none;
 
     animation:zenithAura 6s linear infinite;
 
 }
 
 
-/* =========================
-   AURA ROTATION
-========================= */
-
 @keyframes zenithAura{
 
     from{
-        transform:rotate(0deg);
+        transform:rotate(0deg) scale(.95);
     }
 
     to{
-        transform:rotate(360deg);
+        transform:rotate(360deg) scale(1.08);
     }
 
 }
 
 
-/* =========================
+/* =========================================
    SMOOTH HOVER
-========================= */
+========================================= */
 
 button.zenith-planet:hover{
 
@@ -4934,26 +4915,39 @@ button.zenith-planet:hover{
 
     filter:
         brightness(1.15)
-        saturate(1.25);
+        saturate(1.2);
 
     box-shadow:
         0 0 30px rgba(0,240,255,1),
         0 0 65px rgba(180,50,255,.9),
-        0 0 110px rgba(255,50,210,.65);
+        0 0 115px rgba(255,50,210,.65);
 
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* =========================================
+   KEEP PLANET ABOVE MOVEMENT CARDS
+========================================= */
 
-@media(max-width:900px){
+.orbit-section,
+.orbit-container{
 
-    button.zenith-planet:hover{
+    position:relative;
 
-        transform:scale(1.05) !important;
+    z-index:10;
 
-    }
+}
+
+.planet{
+
+    z-index:20;
+
+}
+
+.movement-display{
+
+    position:relative;
+
+    z-index:2;
 
 }
