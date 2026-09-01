@@ -4935,3 +4935,71 @@ body:has(.orbit-section)::marker{
         0 0 110px rgba(255,50,190,.6);
 
 }
+
+/* =========================
+   ZENITH — FORCE COLOR
+========================= */
+
+button.zenith-planet{
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #ffffff 0%,
+            #7fffff 10%,
+            #00d9ff 25%,
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at 75% 70%,
+            #ff35d1 0%,
+            #9b35ff 30%,
+            transparent 60%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            #304cff 0%,
+            #151052 50%,
+            transparent 80%
+        ),
+        #21105c !important;
+
+    border:2px solid #d8faff !important;
+
+    color:#ffffff !important;
+
+    box-shadow:
+        0 0 20px rgba(0,220,255,.9),
+        0 0 45px rgba(170,50,255,.7),
+        0 0 80px rgba(255,40,200,.45) !important;
+
+    animation:
+        zenithColorShift 6s linear infinite,
+        zenithPulse 4s ease-in-out infinite !important;
+}
+
+
+button.zenith-planet:hover{
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #ffffff 0%,
+            #a5ffff 12%,
+            #00eaff 30%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 75% 70%,
+            #ff65df 0%,
+            #b44cff 35%,
+            transparent 65%
+        ),
+        #24105f !important;
+
+    transform:scale(1.12) !important;
+
+    box-shadow:
+        0 0 30px rgba(0,240,255,1),
+        0 0 65px rgba(180,50,255,.9),
+        0 0 110px rgba(255,50,210,.65) !important;
+}
