@@ -5011,10 +5011,9 @@ button.zenith-planet:hover{
 button.zenith-planet{
 
     transition:
-        transform .6s cubic-bezier(.2,.8,.2,1),
+        transform .6s ease,
         box-shadow .6s ease,
-        filter .6s ease;
-
+        
 }
 
 
@@ -5022,9 +5021,5 @@ button.zenith-planet:hover{
 
     transform:scale(1.12) !important;
 
-    transition:
-        transform .6s cubic-bezier(.2,.8,.2,1),
-        box-shadow .6s ease,
-        filter .6s ease;
 
 }
